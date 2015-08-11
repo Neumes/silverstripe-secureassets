@@ -118,7 +118,7 @@ class ArchiveFileExtension extends SecureFileExtension {
 	 * @param FieldList $fields - The fields in the CMS
 	 * @return void
 	 */
-	public function updateCMSFields($fields) {
+	public function updateCMSFields(FieldList $fields) {
 
 		parent::updateCMSFields($fields);
 

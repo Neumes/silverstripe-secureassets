@@ -15,7 +15,7 @@ class ArchiveFolderExtension extends DataExtension {
 	 * @param FieldList $fields - The fields in the CMS
 	 * @return void
 	 */
-	public function updateCMSFields($fields)
+	public function updateCMSFields(FieldList $fields)
 	{
 		if(($this->owner instanceof Folder) && $this->owner->ID) {
 
