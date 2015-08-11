@@ -7,9 +7,6 @@ Folder:
     - ArchiveFolderExtension
 File:
   extensions:
-    - ArchiveFileExtension
-File:
-  extensions:
    - ArchiveFileExtension
 Director:
   rules:

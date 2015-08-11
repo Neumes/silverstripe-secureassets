@@ -120,6 +120,8 @@ class ArchiveFileExtension extends SecureFileExtension {
 	 */
 	public function updateCMSFields($fields) {
 
+		parent::updateCMSFields($fields);
+
 		// Makes sure we're only adding the fields to a File (Image, etc acceptable) and not a Folder
 		if((($this->owner instanceof File) && !($this->owner instanceof Folder)) && $this->owner->ParentID) {
 			
