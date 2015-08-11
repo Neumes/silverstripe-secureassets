@@ -37,7 +37,7 @@ See the [usage documentation](docs/en/index.md) for more information.
 			}
 		],
 		"require": {
-			"silverstripe/secureassets": "dev-archivefiles#15444b95c6929e0fdd29d92906e88d1285f7a4e8"
+			"silverstripe/secureassets": "dev-archivefiles"
 		}
 		...
 	}
