@@ -27,19 +27,22 @@ See the [usage documentation](docs/en/index.md) for more information.
 ## Installation Instructions
 
  1. Extract the module to your website directory, or install by manually editing composer:
- 	```{
- 	...
- 	"repositories": [
-		{
-			"type": "vcs",
-			"url": "https://github.com/Neumes/silverstripe-secureassets.git"
+ ```
+{
+		...
+		"repositories": [
+			{
+				"type": "vcs",
+				"url": "https://github.com/Neumes/silverstripe-secureassets.git"
+			}
+		],
+		"require": {
+			"silverstripe/secureassets": "dev-archivefiles#15444b95c6929e0fdd29d92906e88d1285f7a4e8"
 		}
-	],
-	"require": {
-		"silverstripe/secureassets": "dev-archivefiles#15444b95c6929e0fdd29d92906e88d1285f7a4e8"
+		...
 	}
-	...
-}```
+```
+
  2. Run /dev/build?flush=1
 
 ## Credit
