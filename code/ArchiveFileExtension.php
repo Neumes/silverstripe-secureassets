@@ -7,7 +7,12 @@
 class ArchiveFileExtension extends SecureFileExtension {
 
 	private static $db = array(
+		'CanViewType' => 'Enum("Anyone,LoggedInUsers,OnlyTheseUsers,Inherit","Inherit")',
 		'IsArchived' => 'Boolean'
+	);
+
+	private static $many_many = array(
+		'ViewerGroups' => 'Group',
 	);
 
 	/**
