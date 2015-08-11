@@ -2,9 +2,15 @@
 Name: secureassetsroutes
 After: '#rootroutes'
 ---
+Folder:
+  extensions:
+    - ArchiveFolderExtension
 File:
   extensions:
-   - SecureFileExtension
+    - ArchiveFileExtension
+File:
+  extensions:
+   - ArchiveFileExtension
 Director:
   rules:
-    'assets': 'SecureFileController'
+    'assets': 'ArchiveFileController'
