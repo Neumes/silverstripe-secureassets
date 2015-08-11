@@ -1,11 +1,13 @@
-# Secure Assets Module
-
-[![Build Status](https://travis-ci.org/silverstripe-labs/silverstripe-secureassets.svg)](https://travis-ci.org/silverstripe-labs/silverstripe-secureassets)
+# Secure Assets Module with Archive Functionality
 
 ## Introduction
 
-A module for adding access restrictions to folders
-that mirrors the access restrictions of sitetree pages
+A modified [module](https://github.com/silverstripe-labs/silverstripe-secureassets) for adding access restrictions to folders
+that mirrors the access restrictions of sitetree pages.
+
+This also adds "Archive" functionality which allows for files to remain
+on the filesystem and inside the CMS. Trying to access an archived file
+will 404 instead of saying that permissions are incorrect.
 
 This is a fork of the community module (Also called Secure Files)
 located at https://github.com/hamishcampbell/silverstripe-securefiles.
@@ -16,8 +18,7 @@ See the [usage documentation](docs/en/index.md) for more information.
 
 ## Maintainer Contact
 
- * Hamish Friedlander `<hamish (at) silverstripe (dot) com>`
- * Sean Harvey `<sean (at) silverstripe (dot) com>`
+ * Tom Brewer-Vinga `<tom (at) silverstripe (dot) com>`
 
 ## Requirements
 
@@ -25,15 +26,29 @@ See the [usage documentation](docs/en/index.md) for more information.
 
 ## Installation Instructions
 
- 1. Extract the module to your website directory, or install using
-    composer: `composer require silverstripe/secureassets dev-master`
+ 1. Extract the module to your website directory, or install by manually editing composer:
+ 	```{
+ 	...
+ 	"repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/Neumes/silverstripe-secureassets.git"
+		}
+	],
+	"require": {
+		"silverstripe/secureassets": "dev-archivefiles#15444b95c6929e0fdd29d92906e88d1285f7a4e8"
+	}
+	...
+}```
  2. Run /dev/build?flush=1
 
 ## Credit
 
-This is a fairly heavy re-write of a community
-module (also called secure files module) by
-Hamish Campbell. Check that module out if you want 
-fine-grained per member access control
+This adds on to the work that the following developers have written.
+This allows for folders to have file archive functionality which will
+404 instead of doing permission checks. This means that you can "archive"
+files and they can no longer be publicly accessed, but they'll still
+be retained on the webserver and inside the CMS.
 
-https://github.com/hamishcampbell/silverstripe-securefiles.
+ * Hamish Campbell - [Secure Files](https://github.com/hamishcampbell/silverstripe-securefiles)
+ * Hamish Friedlander and Sean Harvey [Secure Assets](https://github.com/silverstripe-labs/silverstripe-secureassets)
