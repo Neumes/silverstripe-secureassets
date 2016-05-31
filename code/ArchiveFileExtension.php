@@ -23,7 +23,7 @@ class ArchiveFileExtension extends SecureFileExtension {
 	 */
 	public function needsAccessFile() {
 		
-		if(SapphireTest::is_running_test()) {
+		if(SapphireTest::is_running_test() || ($this->owner->ParentID == 0)) {
 			return false;
 		}
 
